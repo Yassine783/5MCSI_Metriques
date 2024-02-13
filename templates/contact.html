@@ -62,6 +62,13 @@
             background-color: #0056b3;
         }
     </style>
+    <script>
+        function effacerChamps() {
+            document.getElementById("nom").value = "";
+            document.getElementById("prenom").value = "";
+            document.getElementById("message").value = "";
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -79,7 +86,7 @@
                 <label for="message">Message :</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
-            <button type="">Envoyer</button>
+            <button type="submit" onclick="effacerChamps()">Envoyer</button>
         </form>
     </div>
 </body>
