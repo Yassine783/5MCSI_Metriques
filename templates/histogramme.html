@@ -49,6 +49,13 @@ function generateRandomData(numDays) {
     }
     return data;
 }
+       // Récupération de données depuis notre API /paris/
+  fetch('/tawarano/')
+    .then(response => response.json())
+    .then(data => {
+      drawChart(data);
+    })
+}
     </script>
 
   </body>
